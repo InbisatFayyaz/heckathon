@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    // Delay for 5 seconds, then navigate to the login screen.
+    
     Timer(
       Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(

@@ -3,7 +3,7 @@ import 'package:class_project/details.dart';
 import 'package:class_project/documentation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-//import 'donor_detail.dart'; // Import the DonorDetail widget
+
 
 class Donors extends StatelessWidget {
   const Donors({Key? key});

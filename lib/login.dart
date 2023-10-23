@@ -291,9 +291,9 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Text(role),
     );
   }).toList(),
-  onChanged: (String? newValue) { // Change the argument type to String?
+  onChanged: (String? newValue) { 
     setState(() {
-      selectedRole = newValue ?? "Donor"; // Use the null-aware operator to handle null
+      selectedRole = newValue ?? "Donor"; 
     });
   },
 ),

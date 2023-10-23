@@ -7,10 +7,10 @@ class DonorAddedScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Donor Added", style: TextStyle(color: Colors.white, fontSize: 22)),
-        backgroundColor: Colors.red, // Use a different color
+        backgroundColor: Colors.red, 
         actions: [
           IconButton(
-            icon: Icon(Icons.logout), // Your logout icon
+            icon: Icon(Icons.logout), 
             onPressed: () {
              Navigator.of(context).popUntil((route) => route.isFirst);
             },
@@ -20,7 +20,7 @@ class DonorAddedScreen extends StatelessWidget {
       body: Container(color: Colors.white,
         child: Center(
           child: Text(
-            "DONOR ADDED", // You can display a message here
+            "DONOR ADDED", 
             style: TextStyle(fontSize: 26,color: Colors.red),
           ),
         ),

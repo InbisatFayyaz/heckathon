@@ -58,7 +58,7 @@ class DonorDetailScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>MyDonate()));
-                // Handle blood donation logic here
+                
               },
               style: ElevatedButton.styleFrom(
                 primary: Colors.red,

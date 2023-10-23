@@ -58,7 +58,6 @@ class MyForm extends StatelessWidget {
                 final bloodGroup = bloodGroupController.text;
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>DonorAddedScreen()));
 
-                // Now you can use these values as needed, for example, save them to Firebase.
               },
               child: Text('SUBMIT',style: TextStyle(fontSize: 22,color: Colors.white,backgroundColor: Colors.red),),
             ),

@@ -231,7 +231,7 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  String selectedRole = "Donor"; // Default to "Donor"
+  String selectedRole = "Donor"; 
 
   bool isLoading = false;
 
@@ -249,28 +249,27 @@ class _SignupPageState extends State<SignupPage> {
     final userModel = UserModel(
       username: usernameController.text,
       email: emailController.text,
-      role: selectedRole, // Store the selected role in the user model
+      role: selectedRole, 
     );
 
     await credential.user!.sendEmailVerification();
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Verification email sent")));
 
-    // Save the userModel to your database, such as Firebase Firestore
-    // For example, if you're using Firebase Firestore, you can do:
+    
     await FirebaseFirestore.instance.collection('users').doc(credential.user!.uid).set({
       'username': userModel.username,
       'email': userModel.email,
       'role': userModel.role,
     });
 
-    // After successful registration and data storage, navigate to the appropriate page
+    
     if (userModel.role == "Admin") {
       Navigator.push(context, MaterialPageRoute(builder: (context) => adminPage1()));
     } else {
       Navigator.push(context, MaterialPageRoute(builder: (context) => Donors()));
     }
   } on FirebaseAuthException catch (e) {
-    // Handle registration errors as before
+    
   } finally {
     setState(() {
       isLoading = false;
@@ -361,15 +360,13 @@ class _SignupPageState extends State<SignupPage> {
               child: Text(role),
             );
           }).toList(),
-          onChanged: (String? newValue) { // Modify the argument type to String?
+          onChanged: (String? newValue) { 
             setState(() {
-              selectedRole = newValue ?? "Donor"; // Use the null-aware operator to handle null
+              selectedRole = newValue ?? "Donor"; 
             });
           },
         ),
 
-
-        // ... Rest of your SignupPage code ...
 
         Stack(
           children: [
@@ -422,7 +419,7 @@ class _SignupPageState extends State<SignupPage> {
     ),
               ]
     ),
-        // ... Rest of your SignupPage code ...
+        
       ),
     );
   }

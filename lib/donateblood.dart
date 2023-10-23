@@ -63,8 +63,8 @@ class MyDonate extends StatelessWidget {
                 // Now you can use these values as needed, for example, save them to Firebase.
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.white, // Background color
-                onPrimary: Colors.red, // Text color
+                primary: Colors.white, 
+                onPrimary: Colors.red, 
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),

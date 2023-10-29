@@ -21,7 +21,7 @@ class blooddonatescreen extends StatelessWidget {
       body: Container(color: Colors.white,
         child: Center(
           child: Text(
-            "BLOOD DONATE\N THANK YOU!", 
+            "BLOOD DONATED \N THANK YOU!", 
             style: TextStyle(fontSize: 26,color: Colors.red),
           ),
         ),
